@@ -1,21 +1,36 @@
-<%# <h1>pages#home</h1>
-<p>find me in app/views/pages/home.html.erb</p> %>
-<div class="visual-baseline-container">
-  <h2>Le podcast qui explore le travail de demain</h2>
-  <h2>by Hélène & Laëtitia</h2>
-</div>
-<div class="decription-container">
-  <p>Pourquoi est-ce que l’on travaille ? Comment trouver une ou des activités qui font sens pour soi et pour la planète ? 
-  Et si chacun.e pouvait réinventer sa façon de travailler ?</p>
-  <br>
-  <p>Nous explorons avec nos invité.es des alternatives pour travailler autrement : 
-  néo-artisans, slasheurs, indépendants, makers, job-crafteurs, inventeurs, etc. 
-  Nous partons à la rencontre de celles et ceux qui libèrent le travail et définissent 
-  de nouvelles formes de collaboration nécessaires à la transition vers un monde plus écologique, plus solidaire et plus inclusif.</p>
-</div>
-<div class="plateform-container">
+<div class="container text-center">
+  <div class="header-container">
+    <div>
+      <img src="https://via.placeholder.com/450x500.png" alt="banner image">
+    </div>
 
-</div>
-<div class="streaming-episodes-container">
+    <div>
+      <h2>Le podcast qui explore le travail de demain</h2>
+      <p>by Hélène & Laëtitia</p>
+    </div>
+  </div>
+  <hr>
 
+  <div class="decription-container text-justify my-5">
+    <p>Pourquoi est-ce que l’on travaille ? Comment trouver une ou des activités qui font sens pour soi et pour la planète ? 
+    Et si chacun.e pouvait réinventer sa façon de travailler ?</p>
+    <br>
+    <p>Nous explorons avec nos invité.es des alternatives pour travailler autrement : 
+    néo-artisans, slasheurs, indépendants, makers, job-crafteurs, inventeurs, etc. 
+    Nous partons à la rencontre de celles et ceux qui libèrent le travail et définissent 
+    de nouvelles formes de collaboration nécessaires à la transition vers un monde plus écologique, plus solidaire et plus inclusif.</p>
+  </div>
+
+  <hr>
+
+  <div class="plateform-container p-3">
+    <%= image_tag "soundcloud.png", class:"logo-platform mr-3"%>
+    <%= image_tag "spotify.png", class:"logo-platform mr-3" %>
+    <%= image_tag "deezer.png", class:"logo-platform mr-3" %>
+    <%= image_tag "applepodcast.png", class:"logo-platform" %>
+  </div>
+
+  <div class="streaming-episodes-container">
+  </div>
 </div>
+
