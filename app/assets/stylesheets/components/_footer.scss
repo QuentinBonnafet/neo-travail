@@ -1,0 +1,20 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  height: 4vh;
+  line-height: 4vh;
+}
+
+.social-media p:first-child{
+  margin-right: 16px;
+}
+
+.social-media i {
+  margin-right: 16px;
+}
+
+.copyright {
+  margin-left: 16px;
+}
