@@ -1,0 +1,45 @@
+.header-container {
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 20px;
+    color: #249396;
+    font-style: italic;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  p {
+    font-size: 18px;
+    color: #FA9A70;
+    font-style: italic;
+  }
+}
+
+hr {
+  background-color: #FA9A70;
+}
+
+.logo-platform {
+  width: 50px;
+}
+
+.streaming-episodes-container {
+  margin-top: 2%;
+  background-color: #FAF7CE;
+  padding: 5%;
+}
+
+.card-podcast {
+  margin: 0 auto;
+  width: 60%;
+  height: 120px;
+  background-color: #249396;
+}
+
+.newsletter-container {
+  h1 {
+    color: #249396;
+  }
+}
