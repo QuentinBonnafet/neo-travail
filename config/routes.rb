@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # resources :pages
 
   get '/contact', to: 'pages#contact'
-  resources :contact_form, only: [:create]
+  resources :contact_form, only: [:new, :create]
 end
