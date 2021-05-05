@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # resources :pages
 
   get '/contact', to: 'pages#contact'
+  get '/mentions_legales', to: 'pages#mentions_legales'
 end
