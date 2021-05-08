@@ -1,0 +1,27 @@
+.profils-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profil-container {
+  position: relative;
+  margin-top: 6vh;
+  width: 25vw;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+
+  p {
+    text-align: justify;
+  }
+
+  h5 {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+  }
+}
