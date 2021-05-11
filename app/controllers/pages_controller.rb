@@ -13,5 +13,7 @@ class PagesController < ApplicationController
   def about
   end
 
-  
+  def send_contact
+    ContactMailer.contact(params[:message]).deliver
+  end
 end
