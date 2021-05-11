@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/contact', to: 'pages#contact'
   get '/mentions_legales', to: 'pages#mentions_legales'
+  post "send_contact" => "pages#send_contact"
 end
