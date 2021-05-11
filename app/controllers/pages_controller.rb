@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @episodes = Episode.last(3).reverse
   end
 
-  def contact
+  def page_contact
   end
 
   def mentions_legales
