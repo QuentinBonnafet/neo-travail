@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def contact
+  def page_contact
   end
 
   def mentions_legales

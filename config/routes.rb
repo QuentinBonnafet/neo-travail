@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # resources :pages
   get '/about', to: 'pages#about'
-  get '/contact', to: 'pages#contact'
+  get '/page_contact', to: 'pages#page_contact'
   get '/mentions_legales', to: 'pages#mentions_legales'
   post "send_contact" => "pages#send_contact"
 end
