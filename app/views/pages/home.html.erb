@@ -32,15 +32,7 @@
 </div>
 
 <section class="streaming-episodes-container">
-  <div class="card-podcast">
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1038899122&color=%23f79b73&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-23653367" title="Néotravail" target="_blank" style="color: #cccccc; text-decoration: none;">Néotravail</a> · <a href="https://soundcloud.com/user-23653367/3-dessiner-son-job-sur-mesure-avec-nathalie-calvo" title="3# Dessiner son job sur-mesure, avec Nathalie Calvo" target="_blank" style="color: #cccccc; text-decoration: none;">3# Dessiner son job sur-mesure, avec Nathalie Calvo</a></div>
-  </div>
-  <div class="card-podcast">
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1038344590&color=%23f79b73&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-23653367" title="Néotravail" target="_blank" style="color: #cccccc; text-decoration: none;">Néotravail</a> · <a href="https://soundcloud.com/user-23653367/1-vers-la-fin-du-salariat-avec-denis-pennel" title="2# Comment aborder le futur du travail ? Entretien avec Laetitia Vitaud" target="_blank" style="color: #cccccc; text-decoration: none;">2# Comment aborder le futur du travail ? Entretien avec Laetitia Vitaud</a></div>
-  </div>
-  <div class="card-podcast">
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1038335584&color=%23f79b73&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-23653367" title="Néotravail" target="_blank" style="color: #cccccc; text-decoration: none;">Néotravail</a> · <a href="https://soundcloud.com/user-23653367/3-specialiste-du-futur-du-travail-un-metier-davenir" title="1# Vers la fin du salariat ? Entretien avec Denis Pennel" target="_blank" style="color: #cccccc; text-decoration: none;">1# Vers la fin du salariat ? Entretien avec Denis Pennel</a></div>
-  </div>
+  <%= render 'shared/episode', collection: @episodes %>
 </section>
 
 <%= render 'shared/newsletter' %>
