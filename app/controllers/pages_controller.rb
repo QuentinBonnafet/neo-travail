@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def page_contact
+    @contact = Contact.new
   end
 
   def mentions_legales
