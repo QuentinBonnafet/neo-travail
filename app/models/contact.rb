@@ -1,3 +1,4 @@
 class Contact < ApplicationRecord
-  validates :email, uniqueness: true, presence: true
+  before_validation { self.email = email.downcase }
+  validates :first_name, :last_name, :email, :message, presence: true
 end
