@@ -1,8 +1,15 @@
-<hr>
-
-<div class="footer-container">
-    <p class="ml-4">© 2021 Copyright Néotravail</p>
-    <p><%= link_to "Mentions Légales", mentions_legales_path %></p>
-    
-    <p class="color-link mr-4"><a href=""><i class="fab fa-linkedin fa-2x" style="color:black"></i></a></p>
-</div>
+<footer>
+  <div class="container footer-container">
+    <div class="copyright">
+      © 2021 Copyright Néotravail
+    </div>
+    <div class="mentions-legales">
+      <%= link_to "Mentions Légales", mentions_legales_path %>
+    </div>
+    <div class="social-media">
+      <%= link_to do %>
+        <i class="fab fa-linkedin fa-2x"></i>
+      <% end %>
+    </div>
+  </div>
+</footer>

@@ -11,3 +11,76 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+html, body{
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h2 {
+  color: #249396;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 2.5rem;
+  text-decoration: underline;
+  text-underline-offset: 0.6rem;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #249396;
+}
+
+hr {
+  background-color: #FA9A70;
+}
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  body {
+    padding-top: 48px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }

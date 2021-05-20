@@ -1,37 +1,41 @@
 <div class="container">
 
-  <h1 class="text-center header_color">Qui sommes-nous?</h1>
-
-  <div class="profils-container">
-    <div class="profil-container">
-      <img src="https://via.placeholder.com/150" alt="Hélène_avatar" class="avatar_profil">
-      <p>Curieuse de tout, optimiste et pro-convivialité, ce qui m’anime sincèrement sont les liens que l’on crée pour vivre ensemble. Aujourd’hui, je suis à la fois salariée, solo entrepreneure et bénévole. Cette multi-activité me permet de m’épanouir, de m’engager et de m’ancrer. Je passionne aussi pour les nouvelles façons de travailler, utiles pour un avenir commun désirable !</p>
-      <h5>Hélène</h5>
+  <section>  
+    <h2>Qui sommes-nous?</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 profil-container">
+        <%= image_tag "photos/helene", class: "avatar-large" %>
+        <p>Curieuse de tout, optimiste et pro-convivialité, ce qui m’anime sincèrement sont les liens que l’on crée pour vivre ensemble. Aujourd’hui, je suis à la fois salariée, solo entrepreneure et bénévole. Cette multi-activité me permet de m’épanouir, de m’engager et de m’ancrer. Je passionne aussi pour les nouvelles façons de travailler, utiles pour un avenir commun désirable !</p>
+        <h5>Hélène</h5>
+      </div>
+      <div class="col-12 col-md-6 profil-container">
+        <%= image_tag "photos/laetitia", class: "avatar-large" %>
+        <p>Slasheuse assumée, j’exerce aujourd’hui différentes activités : conseil en communication et rédactrice dans l’ESS et dans la culture; accompagnatrice de personnes en évolution de vie professionnelle; bénévole engagée. Mes champs d’exploration sont les métiers de demain, la place des femmes dans le futur du travail, et la transition écologique et solidaire !</p>
+        <h5>Laetïtia</h5>
+      </div>    
     </div>
-    <div class="profil-container">
-      <img src="https://via.placeholder.com/150" alt="Laetitia_avatar" class="avatar_profil">
-      <p>Slasheuse assumée, j’exerce aujourd’hui différentes activités : conseil en communication et rédactrice dans l’ESS et dans la culture; accompagnatrice de personnes en évolution de vie professionnelle; bénévole engagée. Mes champs d’exploration sont les métiers de demain, la place des femmes dans le futur du travail, et la transition écologique et solidaire !</p>
-      <h5>Laetïtia</h5>
-    </div>
-  </div>
+  </section>
 
   <hr class="mt-5">
 
-  <div class="about-oririn-container">
-    <h1 class="text-center my-5 header_color">Les origines</h1>
+  <section class="about-origin-container my-5">
+    <h2>Les origines</h2>
     <p>Même Pas Peur, c’est d’abord un collectif informel né en 2017 qui se donne pour mission d’inspirer et d’outiller les personnes en quête de sens, à la recherche d’un équilibre vie pro / vie perso, et notamment l’adéquation entre ses valeurs et son activité professionnelle. De nombreux évènements et ateliers ont été organisés via Meetup, avec une communauté réunissant plus de 2 000 personnes !
     </p>
     <p>L’équipe du collectif s’est depuis agrandie et s’est structuré en  association fin 2019.  Plus on est de fous, plus on rit, et plus on est créatifs aussi ! Même Pas Peur propose un espace d’espace, mais est aussi un laboratoire d’expérimentation pour qui veut tester des initiatives et des projets : évènements en ligne, ateliers de créativité, d’écriture digitale, réflexion sur un nouveau média, etc.</p>
-  </div>
+  </section>
+</div>
 
-  <div class="d-flex justify-content-between mt-5">
-    <img src="https://via.placeholder.com/250" alt="photo-1">
-    <img src="https://via.placeholder.com/250" alt="photo-2">
-    <img src="https://via.placeholder.com/250" alt="photo-3">
-    <img src="https://via.placeholder.com/250" alt="photo-4">
-  </div>
-  <div class="about-podcast-container mt-5">
-    <h1 class="text-center mb-4 header_color">Le Podcast</h1>
+<div class="about-photos-container">
+  <div class="photo"><%= image_tag "photos/photo-1" %></div>
+  <div class="photo"><%= image_tag "photos/photo-2" %></div>
+  <div class="photo"><%= image_tag "photos/photo-3" %></div>
+  <div class="photo"><%= image_tag "photos/photo-4" %></div>
+</div>
+
+<div class="about-podcast-container">
+  <div class="container">
+    <h2>Le Podcast</h2>
     <p>Lors des événements organisés par Même Pas Peur sur Lyon, nous avons rencontré ces trois dernières années des dizaines de personnes qui cassent les codes et réinventent leur métier.
     </p>
 
@@ -48,20 +52,6 @@
 
     <p class="mt-4">Bonne écoute !</p>
   </div>
-
-  <hr class="my-5">
-
-  <div class="newsletter-container text-center">
-    <h1>Newsletter</h1>
-    <p>Pour découvrir de nouveaux métier ou en savoir plus sur le futur du travail,<br> inscrit toi à la newsletter !</p>
-    <input type="text" class="w-50 my-3"><br>
-    <input type="text" class="w-50">
-  </div>
-  <div class="text-center mt-3">
-    <p><input type="checkbox"><span>En cochant cette case, j'accepte de recevoir des informations par mail</span></p> 
-    <p><a href="#" class="btn btn-warning btn-lg">Envoyer</a></p>
-  </div>
-  <p class="text-justify w-75 m-auto">Votre adresse de messagerie est uniquement utilisée pour vous envoyer les lettres d'information de Neo Travail. Vous pouvez à tout moment utiliser le lien de désabonnement intégré dans la newsletter.</p>
-
-  <hr class="my-5">
 </div>
+
+<%= render 'shared/newsletter' %>

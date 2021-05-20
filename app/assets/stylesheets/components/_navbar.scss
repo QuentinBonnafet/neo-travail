@@ -1,12 +1,40 @@
-.navbar-lewagon {
+.navbar-neo {
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
   justify-content: space-between;
   background: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-bottom: 2px solid $neogreen
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-neo .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-neo .navbar-brand img {
   width: 40px;
+}
+
+.navbar-neo {
+  .nav-item {
+    font-weight: 700;
+    margin: 1.5rem 3rem 1.5rem 0;
+    .nav-link {
+      padding: 0;
+    }
+    &.active {
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.3rem;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

@@ -1,6 +1,33 @@
+footer {
+  background-color: white;
+  border-top: 2px solid $neogreen;
+  padding: 1rem 0;
+}
+
 .footer-container {
   display: flex;
+  position: relative;
   justify-content: space-between;
-  font-size: 16px;
   align-items: center;
+  padding: 1rem;
+  a {
+    color: $neogreen;
+    &:hover {
+      color: $neorange;
+    }
+  }
+}
+
+.mentions-legales {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 768px) { 
+  .mentions-legales {
+    position: relative;
+    left: 0;
+    transform: translate(0, 0);
+  }
 }

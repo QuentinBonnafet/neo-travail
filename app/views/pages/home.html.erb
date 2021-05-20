@@ -1,55 +1,38 @@
-  <div class="container">
-    <div class="header-container">
-      <div>
-        <img src="https://via.placeholder.com/450x500.png" alt="banner image">
-      </div>
+<div class="container">
+  <section class="header-container">
+    <%= image_tag "neo-travail.jpg", alt: "Image du logo de Néo-travail" %>
 
-      <div>
-        <h2>Le podcast qui explore le travail de demain</h2>
-        <p>by Hélène & Laëtitia</p>
-      </div>
+    <div>
+      <h4 class="mb-0">Le podcast qui explore le travail de demain</h4>
+      <p>by Hélène & Laëtitia</p>
     </div>
-    <hr>
+  </section>
 
-    <div class="decription-container text-justify my-5">
-      <p>Pourquoi est-ce que l’on travaille ? Comment trouver une ou des activités qui font sens pour soi et pour la planète ? 
-      Et si chacun.e pouvait réinventer sa façon de travailler ?</p>
-      <br>
-      <p>Nous explorons avec nos invité.es des alternatives pour travailler autrement : 
-      néo-artisans, slasheurs, indépendants, makers, job-crafteurs, inventeurs, etc. 
-      Nous partons à la rencontre de celles et ceux qui libèrent le travail et définissent 
-      de nouvelles formes de collaboration nécessaires à la transition vers un monde plus écologique, plus solidaire et plus inclusif.</p>
-    </div>
+  <hr>
 
-    <hr>
+  <section class="decription-container text-justify my-5">
+    <p class="mb-2">Pourquoi est-ce que l’on travaille ? Comment trouver une ou des activités qui font sens pour soi et pour la planète ? 
+    Et si chacun.e pouvait réinventer sa façon de travailler ?</p>
+    <p>Nous explorons avec nos invité.es des alternatives pour travailler autrement : 
+    néo-artisans, slasheurs, indépendants, makers, job-crafteurs, inventeurs, etc. 
+    Nous partons à la rencontre de celles et ceux qui libèrent le travail et définissent 
+    de nouvelles formes de collaboration nécessaires à la transition vers un monde plus écologique, plus solidaire et plus inclusif.</p>
+  </section>
 
-    <div class="plateform-container p-3">
+  <hr>
+
+  <section class="plateform-container p-3">
+    <%= link_to "https://soundcloud.com/user-23653367", target: "_blank" do %>
       <%= image_tag "soundcloud.png", class:"logo-platform mr-4"%>
-      <%= image_tag "spotify.png", class:"logo-platform mr-4" %>
-      <%= image_tag "deezer.png", class:"logo-platform mr-4" %>
-      <%= image_tag "applepodcast.png", class:"logo-platform" %>
-    </div>
-
-    <div class="streaming-episodes-container">
-    <%# replace the card-podcast by the soundcloud podcast %>
-      <div class="card-podcast mb-5"></div>
-      <div class="card-podcast mb-5"></div>
-      <div class="card-podcast"></div>
-    </div>
-
-    <hr>
-
-    <div class="newsletter-container text-center">
-      <h1>Newsletter</h1>
-      <p>Pour découvrir de nouveaux métier ou en savoir plus sur le futur du travail,<br> inscrit toi à la newsletter !</p>
-      <input type="text" class="w-50 my-3"><br>
-      <input type="text" class="w-50">
-    </div>
-    <div class="text-center mt-3">
-      <p><input type="checkbox"><span>En cochant cette case, j'accepte de recevoir des informations par mail</span></p> 
-      <p><a href="#" class="btn btn-warning btn-lg">Envoyer</a></p>
-    </div>
-    <p class="text-justify w-75 m-auto">Votre adresse de messagerie est uniquement utilisée pour vous envoyer les lettres d'information de Neo Travail. Vous pouvez à tout moment utiliser le lien de désabonnement intégré dans la newsletter.</p>
-    <hr>
+    <% end %>
+    <%= image_tag "spotify.png", class:"logo-platform mr-4" %>
+    <%= image_tag "deezer.png", class:"logo-platform mr-4" %>
+    <%= image_tag "applepodcast.png", class:"logo-platform" %>
+  </section>
 </div>
 
+<section class="streaming-episodes-container">
+  <%= render 'shared/episode', collection: @episodes %>
+</section>
+
+<%= render 'shared/newsletter' %>

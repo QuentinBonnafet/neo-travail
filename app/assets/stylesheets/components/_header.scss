@@ -1,14 +1,12 @@
 .header-container {
-  width: 450px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  h2 {
-    font-size: 20px;
-    color: #249396;
-    font-style: italic;
-    margin-top: 5%;
-    margin-bottom: 5%;
+  img {
+    width: 40%;
+    height: auto;
   }
   p {
     font-size: 18px;
@@ -17,35 +15,29 @@
   }
 }
 
-hr {
-  background-color: #FA9A70;
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .header-container {
+    img {
+      width: 80%;
+    }
+  }
 }
 
-.logo-platform {
-  width: 50px;
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { 
+  .header-container {
+    img {
+      width: 70%;
+    }
+  }
 }
 
-.streaming-episodes-container {
-  margin-top: 2%;
-  background-color: #FAF7CE;
-  padding: 5%;
-}
-
-.plateform-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-podcast {
-  margin: 0 auto;
-  width: 60%;
-  height: 120px;
-  background-color: #249396;
-}
-
-.newsletter-container {
-  h1 {
-    color: #249396;
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .header-container {
+    img {
+      width: 60%;
+    }
   }
 }

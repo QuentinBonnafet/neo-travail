@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
     if contact.save
       redirect_to :root
     else
-      render "pages/page_contact"
+      render "pages/contact"
     end
   end
 

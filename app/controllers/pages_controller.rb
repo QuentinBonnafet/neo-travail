@@ -2,9 +2,10 @@ class PagesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
+    @episodes = Episode.last(3).reverse
   end
 
-  def page_contact
+  def contact
     @contact = Contact.new
   end
 
