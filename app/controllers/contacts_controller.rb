@@ -28,8 +28,8 @@ class ContactsController < ApplicationController
     params
       .require(:contact)
       .permit(
-        :lastname,
-        :firstname,
+        :last_name,
+        :first_name,
         :email,
         :message
       )

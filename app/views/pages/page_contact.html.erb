@@ -5,20 +5,20 @@
 </div>
 
   <div class="color mt-5">
-    <%= simple_form_for [@user] do |f| %>
-        <%# <%= f.input :name, placeholder: 'Votre nom' %> %>
-        <%# <%= f.input :email, placeholder: 'Votre adresse email' %> %>
+    <%= simple_form_for @contact, url: "/contacts", method: :post do |f| %>
+        <%= f.input :name, placeholder: 'Votre nom' %>
+        <%= f.input :email, placeholder: 'Votre adresse email' %>
         <%= f.input :message, placeholder: 'Message' %>
         <%= f.submit "Envoyer", class: "btn btn-primary" %>
     <% end %>
     <%# <div class="contact_form">
-    <form action="/send_contact" method="post">
-      <h1 class="mb-4 header_color">Contact</h1>
-      <input name="name"  type="text" placeholder="Nom">
-      <input name="email" type="text" placeholder="Email">
-      <textarea name="message" placeholder="Message" rows="7"></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
+      <form action="/send_contact" method="post">
+        <h1 class="mb-4 header_color">Contact</h1>
+        <input name="name"  type="text" placeholder="Nom">
+        <input name="email" type="text" placeholder="Email">
+        <textarea name="message" placeholder="Message" rows="7"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
     </div> %>
   </div>
 </div>
