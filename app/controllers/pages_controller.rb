@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @contact = Contact.new
   end
 
   def mentions_legales
@@ -13,4 +14,9 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def send_contact
+    ContactMailer.contact(params[:message]).deliver
+  end
+
 end
