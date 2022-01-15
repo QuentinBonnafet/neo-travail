@@ -8,6 +8,14 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     @contact.user = current_user if current_user.present?
+
+    if @contact.save
+      flash[:notice] = "Le contact a été créé avec succès"
+      # redirect_to user_path(current_user)
+    else
+      flash[:error] = "Une erreur s'est produite lors de la création du contact"
+      render :new
+    end
   end
 
   private

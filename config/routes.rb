@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   # get '/contact', to: 'pages#contact'
   get '/contact', to: 'contacts#new'
   get '/mentions_legales', to: 'pages#mentions_legales'
+
+  post '/contacts', to: 'contacts#create'
 end
