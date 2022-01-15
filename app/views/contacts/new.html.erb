@@ -1,0 +1,8 @@
+<h1>Contact</h1>
+<%= simple_form_for [ @contact ] do |f| %>
+  <%= f.input :first_name, label: 'Nom' %>
+  <%= f.input :last_name, label: 'Prénom' %>
+  <%= f.input :email, label: 'Votre message' %>
+  <%= f.submit "Valider", class: "btn btn-success" %>
+  <%= link_to "Annuler", user_path(current_user), class: "btn btn-danger" %>
+<% end %>
