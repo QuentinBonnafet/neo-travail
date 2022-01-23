@@ -18,6 +18,10 @@ class ContactsController < ApplicationController
     end
   end
 
+  def contact
+    @contact_email = params[:email]
+  end
+
   private
 
   def contact_params
