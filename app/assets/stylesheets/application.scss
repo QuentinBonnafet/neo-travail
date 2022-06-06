@@ -26,11 +26,11 @@ body {
   padding-top: 80px;
 }
 
-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+// body{
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
 
 ul, li {
   list-style: none;
@@ -67,7 +67,7 @@ hr {
 
 
 // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
   body {
     padding-top: 48px;
   }
