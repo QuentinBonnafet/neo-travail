@@ -23,5 +23,7 @@ class Admin < ApplicationRecord
 
   # INSTANCE METHODS ======================================================
 
+  alias_attribute :to_s, :email
+
   # PRIVATE ===============================================================
 end

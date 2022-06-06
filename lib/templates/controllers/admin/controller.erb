@@ -1,0 +1,65 @@
+# frozen_string_literal: true
+
+class Admin::<%= controller_class_name %>Controller < Admin::BaseController
+  include IndexHelper
+  before_action :set_<%= singular_table_name %>, only: [:edit, :update, :destroy]
+
+  def index
+    params[:sort] ||= ""
+
+    @pagy, @<%= plural_table_name %> = pagy(<%= class_name %>.apply_filters(params))
+  end
+
+  def new
+    @<%= singular_table_name %> = <%= class_name %>.new
+  end
+
+  def create
+    @<%= singular_table_name %> = <%= class_name %>.new(<%= "#{singular_table_name}_params" %>)
+
+    if @<%= singular_table_name %>.save
+      flash[:notice] = "<%= class_name %> a été créée avec succès"
+      redirect_back_or_edit(@<%= singular_table_name %>)
+    else
+      flash[:error] = "Une erreur s'est produite lors de la création de <%= class_name %>"
+      render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @<%= singular_table_name %>.update(<%= "#{singular_table_name}_params" %>)
+      flash[:notice] = "<%= class_name %> a été mise à jour avec succès"
+      redirect_back_or_edit(@<%= singular_table_name %>)
+    else
+      flash[:error] = "Une erreur s'est produite lors de la mise à jour de <%= class_name %>"
+      render :edit
+    end
+  end
+
+  def destroy
+    if @<%= singular_table_name %>.destroy
+      flash[:notice] = "<%= class_name %> a bien été supprimée"
+    else
+      flash[:error] = "Une erreur s'est produite lors de la suppression de <%= class_name %>"
+    end
+
+    redirect_back_or_edit(@<%= singular_table_name %>)
+  end
+
+  private
+
+  def set_<%= singular_table_name %>
+    @<%= singular_table_name %> = <%= class_name %>.find(params[:id])
+  end
+
+  def <%= "#{singular_table_name}_params" %>
+    params
+      .require(:<%= singular_table_name %>)
+      .permit(
+        <%= attributes_names.map { |attribute| ":#{attribute}" }.join(",\n        ") %>
+      )
+  end
+end
