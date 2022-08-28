@@ -1,4 +1,4 @@
-class Admin::AdminsController < ApplicationController
+class Admin::AdminsController < Admin::BaseController
   before_action :set_admin, only: %i[edit update destroy]
 
   def show

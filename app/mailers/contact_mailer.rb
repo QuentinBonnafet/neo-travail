@@ -1,10 +1,12 @@
 class ContactMailer < ApplicationMailer
-  default from: 'quentin.bonnafet@gmail.com'
+  default from: 'kyudev@protonmail.com'
 
-  def contact(message)
-    # @name = name
-    # @email = email
-    @message = message
+  def contact_created
+    # @first_name = params[:first_name]
+    # @last_name = params[:last_name]
+    # @email = params[:email]
+    # @message = params[:message]
+    @contact = params[:contact]
     mail(to: 'quentin.bonnafet@gmail.com', subject: 'Contact')
   end
 end
