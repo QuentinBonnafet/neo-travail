@@ -3,14 +3,13 @@
   <br> Tu veux recommander une personne à interviewer ou un sujet à explorer ?</p>
   <p>Ecris-nous à <a href="mailto: contact@neotravail.fr">contact@neotravail.fr</a> ou remplis le formulaire ci-dessous :)</p>
 </div>
-
-<div class="color mt-5">
-  <div class="contact_form">
-    <h2>Contact</h2>
-    <input type="text" placeholder="Nom">
-    <input type="text" placeholder="Email">
-    <textarea placeholder="Message" rows="7"></textarea>
-    <button type="submit">Envoyer</button>
+  <div class="color mt-5">
+    <%= simple_form_for @contact, url: "/contacts", method: :post do |f| %>
+        <%= f.input :name, placeholder: 'Votre nom' %>
+        <%= f.input :email, placeholder: 'Votre adresse email' %>
+        <%= f.input :message, placeholder: 'Message' %>
+        <%= f.submit "Envoyer", class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
 

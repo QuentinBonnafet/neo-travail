@@ -1,0 +1,19 @@
+<div class="container text-center">
+  <p>Tu exerces un "nouveau métier", une nouvelle façon de collaborer tournée vers un <br> monde plus juste, plus durable et plus inclusif ?
+  <br> Tu veux recommander une personne à interviewer ou un sujet à explorer ?</p>
+  <p>Ecris-nous à <a href="mailto: contact@neotravail.fr">contact@neotravail.fr</a> ou remplis le formulaire ci-dessous :)</p>
+</div>
+
+<div class="color mt-5">
+  <%= simple_form_for @contact, url: "/contacts", method: :post, :html=> { class: 'contact_form' } do |f| %>
+    <h2>Contact</h2>
+    <%= f.input :first_name, placeholder: 'Votre Nom', label: false %>
+    <%= f.input :last_name, placeholder: 'Votre Prénom', label: false %>
+    <%= f.input :email, placeholder: 'Votre adresse email*', label: false %>
+    <%= f.input :message, placeholder: 'Message*', label: false %>
+    <%= f.submit "Envoyer", class: "btn btn-primary" %>
+    <p>
+  <% end %>
+</div>
+
+<%= render 'shared/newsletter' %>

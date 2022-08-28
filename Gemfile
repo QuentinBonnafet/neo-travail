@@ -38,7 +38,8 @@ gem 'simple_form'
 # Media cloud service
 gem 'cloudinary'
 
-group :development, :test do  gem 'pry-byebug'
+group :development, :test do
+  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
 
@@ -54,6 +55,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+gem "letter_opener", group: :development
 
 group :test do
   # Adds support for Capybara system testing and selenium driver

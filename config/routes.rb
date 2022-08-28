@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     root to: "admins#index"
   end
 
+  resources :contacts, only: [:new, :create]
+
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }

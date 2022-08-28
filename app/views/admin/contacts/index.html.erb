@@ -1,0 +1,28 @@
+<% if admin_signed_in? %>
+  <div class="grid-container">
+    <div>
+      <h1 class="text-center">Liste des Contacts</h1>
+    </div>
+
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Nom complet</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+
+      <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.created_at.to_date %></td>
+        <td><%= contact.full_name %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.message.truncate(30) %></td>
+      </tr>
+      <% end %>
+    </table>
+<% else %>
+  <div class="text-center">
+    <%= link_to "Se connecter", new_admin_session_path %>
+  </div>
+<% end %>
