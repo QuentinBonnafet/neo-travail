@@ -7,6 +7,7 @@
       <% end %>
     <% end %>
 
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,7 +16,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item <%= "active" if current_page?(root_path) %>">
           <%= link_to "Le Podcast", root_path, class: "nav-link" %>
-          </li>
+        </li>
         <li class="nav-item <%= "active" if current_page?(about_path) %>">
           <%= link_to "À propos", about_path, class: "nav-link" %>
         </li>

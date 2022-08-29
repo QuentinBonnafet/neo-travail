@@ -1,8 +1,23 @@
-<ul>
+<% if admin_signed_in? %>
+  <%= link_to root_path do %>
+    <p>Accéder au site</p>
+  <% end %>
+
+  <%= link_to admin_root_path do %>
+    <p>Retour</p>
+  <% end %>
+
+  <div class="text-center">
+    <%= link_to "Se déconnecter", destroy_admin_session_path, method: :delete %>
+  </div>
+<% end %>
+
+
+<%# <ul>
   <li>
     Episodes
   </li>
   <li>
     Blog
   </li>
-</ul>
+</ul> %>

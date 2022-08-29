@@ -35,6 +35,8 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+gem 'bootstrap-datepicker-rails'
+
 # Media cloud service
 gem 'cloudinary'
 

@@ -15,7 +15,7 @@ episode_1 = Episode.create!(
   Pour Denis Pennel, les attentes des salariés ont changé et « l’entreprise doit revoir son contrat avec les individus ».
   Rencontre avec Denis Pennel, spécialiste du marché du travail, conférencier, auteur et Directeur de la World Employement Confederation.",
   publication_date: Date.new(2021,4,30),
-  soundcloud_url: "https://soundcloud.com/user-23653367/3-specialiste-du-futur-du-travail-un-metier-davenir"
+  link_url: "https://soundcloud.com/user-23653367/3-specialiste-du-futur-du-travail-un-metier-davenir"
 )
 puts "#{episode_1.title} was successfully created!"
 
@@ -25,7 +25,7 @@ episode_2 = Episode.create!(
   Laetitia Vitaud, spécialiste du Futur du travail, écrivaine, autrice de l’excellent livre “Du labeur à l’ouvrage”, et créatrice du média Nouveau départ, nous partage ses réflexions. Elle nous livre ses conseils sur la quête de sens et sur la place grandissante que vont occuper les métiers de proximité dans l’avenir. Des métiers aujourd’hui essentiellement occupés par des femmes.
   Quel est donc la place des femmes dans l’avenir du travail ? Et comment les hommes peuvent-il contribuer à l’avénement d’une société du travail plus inclusive ?",
   publication_date: Date.new(2021,4,30),
-  soundcloud_url: "https://soundcloud.com/user-23653367/1-vers-la-fin-du-salariat-avec-denis-pennel"
+  link_url: "https://soundcloud.com/user-23653367/1-vers-la-fin-du-salariat-avec-denis-pennel"
 )
 puts "#{episode_2.title} was successfully created!"
 
@@ -34,6 +34,6 @@ episode_3 = Episode.create!(
   description: "Serial reconvertie et aujourd’hui slasheuse assumée, Nathalie cumule différentes activités. Elle est urbaniste, militante, accompagnatrice de personnes en évolution de vie, réalisatrice d’un documentaire. A travers ses expériences et son vécu, nous découvrons comment elle capitalise sur toutes ces activités passées et présentes pour donner du relief à son activité principale, et à sa passion : la ville durable.
   Dans cet épisode, Nathalie revient sur son parcours, ses forces et sa détermination à réaliser ses rêves. Une émission inspirante et plein de conseils pour dessiner son job et sa vie sur-mesure !",
   publication_date: Date.new(2021,4,30),
-  soundcloud_url: "https://soundcloud.com/user-23653367/3-dessiner-son-job-sur-mesure-avec-nathalie-calvo"
+  link_url: "https://soundcloud.com/user-23653367/3-dessiner-son-job-sur-mesure-avec-nathalie-calvo"
 )
 puts "#{episode_3.title} was successfully created!"

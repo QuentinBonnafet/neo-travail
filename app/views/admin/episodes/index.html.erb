@@ -1,0 +1,36 @@
+<div class="grid-container">
+  <div>
+    <h1 class="text-center">Liste des Episodes</h1>
+  </div>
+
+  <div>
+    <%= link_to "Créer un épisode", new_admin_episode_path %>
+  </div>
+  <br>
+
+  <table>
+    <tr>
+      <th>Date d'enregistrement</th>
+      <th>Titre</th>
+      <th>Date de Publication</th>
+      <th>Description</th>
+      <th>
+    </tr>
+
+    <% @episodes.each do |episode| %>
+    <tr>
+      <td><%= episode.created_at.strftime("%d/%m/%Y") %></td>
+      <td><%= episode.title %></td>
+      <td><%= episode.publication_date.strftime("%d/%m/%Y") %></td>
+      <td><%= episode.description.truncate(30) %></td>
+      <td>
+        <%= link_to edit_admin_episode_path(episode), title: "Editer" do %>
+          <i class="fa-solid fa-pen"></i>
+        <% end %>
+        <%= link_to admin_episode_path(episode), method: :delete, data: { confirm: "Confirmer la suppression ?" }, title: "Supprimer" do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+    </tr>
+    <% end %>
+  </table>
+</div>

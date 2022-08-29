@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :episodes
     resources :posts
-    resources :contacts
+    resources :contacts, except: %i[new create]
 
     root to: "admins#index"
   end
