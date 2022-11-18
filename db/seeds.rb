@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Admin ===================================================================================================
+
+Admin.where(email: "kyudev@protonmail.com", password: "password").first_or_create
+
+puts "1st Admin created"
+
+# Episode ==================================================================================================
+
 Episode.destroy_all
 
 episode_1 = Episode.create!(
@@ -37,3 +45,5 @@ episode_3 = Episode.create!(
   link_url: "https://soundcloud.com/user-23653367/3-dessiner-son-job-sur-mesure-avec-nathalie-calvo"
 )
 puts "#{episode_3.title} was successfully created!"
+
+
